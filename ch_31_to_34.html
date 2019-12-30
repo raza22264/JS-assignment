@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script>
+
+var rightNow = new Date();
+   console.log(rightNow);
+
+   var a = prompt("enter name","raza");
+        console.log(a);
+
+        var birth_date = prompt("enter date","7");
+        var birth_year = prompt("enter year","1997");
+        var birth_month = prompt("enter month","july");
+
+    var birthDay = new Date(birth_month + birth_date +","+birth_year);
+   // console.log(birthDay);
+
+    var b = rightNow.getHours();
+//console.log(b);
+if (b > 4 ){
+  console.log("hello "+ a + " Good Morning")
+}
+else if(b > 12 ){
+  console.log("hello "+ a + " Good Afternoon")      
+                                     // 12 5
+}
+else if(b > 17){
+  console.log("hello "+ a +" Good Evening")           //5 8
+}
+else if(b > 20 || b > 0){
+  console.log("hello "+ a +" Good Night")      
+}
+var mydiff = (rightNow.getTime() - birthDay.getTime());
+
+  var minutes = (rightNow.getMinutes() - birthDay.getMinutes());
+ // console.log(minutes);
+
+  //var minutes = (rightNow.getMinutes() - birthDay.getMinutes());
+ // var $days = (rightNow.getDay() - birthDay.getDay());
+var days = Math.round((mydiff / (1000 * 60 * 60 *24 )));
+
+
+
+  var seconds = (rightNow.getSeconds() - birthDay.getSeconds());
+  var years = (rightNow.getFullYear() - birthDay.getFullYear());
+  var months = (rightNow.getMonth() - birthDay.getMonth());
+  var hours = (rightNow.getHours() - birthDay.getHours());
+
+  
+
+  console.log("you are " + years+ " years " + months + " month "+ days + " days " + hours + " hours " + minutes + " minutes " + seconds + " seconds ");
+
+  var next_date = new Date("july" + 7 + "," + 2020);
+        next_diff = next_date.getTime() - rightNow.getTime();
+
+
+
+    var sec_n = next_diff / 1000;
+    sec_round2 = Math.round(sec_n);
+
+        var minutes_n = next_diff / (22 * 1000 * 60);
+        minutes_round2 = Math.round(minutes_n);
+
+        var hours_n = next_diff / (22 * 1000 * 60 * 60 * 24);                              //(1000 * 60 * 60);
+        hours_round2 = Math.round(hours_n);
+
+        var days_n = next_diff / ( 1000 * 60 * 60 * 24);
+        days_round2 = Math.round(days_n);
+
+        var years_n = next_diff / ( 1000 * 60 * 60 * 24 * 365);
+        years_round2 = Math.round(years_n);
+
+     //   var months_n = (((next_diff / ( 1000 * 60 * 60 * 24) / 365) * 12) % 12);
+     //   months_round2 = Math.round(months_n);
+        console.log("How much time left in your next birthday? " + days_round2 + " days " + hours_round2 + " hours " + minutes_round2 + " minutes " + sec_round2 + " seconds. "+ "happy Birth Day " +a+ " Today is Your " +years+ " Birthday")
+
+
+
+</script>
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>

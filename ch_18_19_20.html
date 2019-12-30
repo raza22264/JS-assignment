@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <script>
+            
+                var courses = [];
+                
+            
+                for(i = 1; i <= 5; i++ ){
+                    
+                    courses.push(prompt('Enter course' + ' ' + i));
+                }
+            
+                alert(courses);
+                
+                for (i = 0; i< courses.length; i++){
+                    alert(courses[i]);
+                }
+                
+                for(i = 0; i < courses.length; i++){
+                    courses[i] = prompt('Enter edited course ' + (i + 1), courses[i]);
+                }
+        
+                alert(courses);
+                
+                </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
